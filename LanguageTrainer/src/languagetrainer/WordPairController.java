@@ -5,8 +5,11 @@
  */
 package languagetrainer;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -15,7 +18,7 @@ import java.util.Random;
 public class WordPairController implements WordPairControlInterface {
 
     private ArrayList<WordsPair> newWordList;
-
+//test
     @Override
     public void add(String question, String answer) {
         WordsPair w1 = new WordsPair(answer, question);
@@ -53,18 +56,24 @@ public class WordPairController implements WordPairControlInterface {
 
     @Override
     public String lookup(String question) {
-        Object obj = context.lookup;
+           for (WordsPair pair : newWordList) {
+            if(pair.getEngWord()==question){
+                return pair.getDkWord();
+            }
+        }
+        return null;
+                
                 
     }
 
     @Override
     public boolean load(String filename) {
-
+        
+    
     }
-
     @Override
     public boolean save(String filename) {
-
+        
     }
 
     @Override
