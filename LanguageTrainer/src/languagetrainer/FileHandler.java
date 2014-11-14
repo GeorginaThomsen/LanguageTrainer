@@ -39,11 +39,13 @@ public class FileHandler {
             String[] words = stringWord.split(",");
             WordsPair tempPerson = new WordsPair( words[0], words[1]);
             temp.add(tempPerson);
+            
         }
         
         
         
         return temp;
+        
     }
     public static boolean saveNewWord(ArrayList<WordsPair> stringArray, String filename) {
         if (stringArray == null) {

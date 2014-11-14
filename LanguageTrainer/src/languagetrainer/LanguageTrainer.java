@@ -19,14 +19,12 @@ public class LanguageTrainer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        WordPairController wordPairController = new WordPairController();
-//        private ArrayList<WordsPair> newWordList;
-//        WordsPair wordspair;
-        
-        
-        wordPairController.load("newfile.txt");
-        
+       
+        WordPairController control = new WordPairController();
+        control.load("newfile.txt");
+        System.out.println( control.lookup("horse"));
+        System.out.println( control.size());
+        System.out.println( control.newWordList.toString());
     }
     }
          

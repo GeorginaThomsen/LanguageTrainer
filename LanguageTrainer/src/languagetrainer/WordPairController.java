@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class WordPairController implements WordPairControlInterface {
 
-    private ArrayList<WordsPair> newWordList;
+    public ArrayList<WordsPair> newWordList;
     
 //test
     @Override
@@ -59,7 +59,7 @@ public class WordPairController implements WordPairControlInterface {
                 return pair.getDkWord();
             }
         }
-        return null;
+        return question;
                 
                 
     }
