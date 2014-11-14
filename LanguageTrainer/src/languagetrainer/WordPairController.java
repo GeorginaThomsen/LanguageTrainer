@@ -5,11 +5,8 @@
  */
 package languagetrainer;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  *
@@ -18,6 +15,7 @@ import java.util.Scanner;
 public class WordPairController implements WordPairControlInterface {
 
     private ArrayList<WordsPair> newWordList;
+    
 //test
     @Override
     public void add(String question, String answer) {
@@ -68,17 +66,20 @@ public class WordPairController implements WordPairControlInterface {
 
     @Override
     public boolean load(String filename) {
-        
-    
+       newWordList = FileHandler.load(filename);
+ 
+        return true;
     }
+            
     @Override
     public boolean save(String filename) {
-        
-    }
+        return FileHandler.saveNewWord(newWordList, filename);
 
+    }
+    
     @Override
     public void clear() {
         newWordList.clear();
     }
-
+        
 }

@@ -6,6 +6,9 @@
 
 package languagetrainer;
 
+import java.util.ArrayList;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 /**
  *
  * @author Cookie
@@ -17,6 +20,16 @@ public class LanguageTrainer {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        WordPairController wordPairController = new WordPairController();
+//        private ArrayList<WordsPair> newWordList;
+//        WordsPair wordspair;
+        
+        
+        wordPairController.load("newfile.txt");
+        
     }
+    }
+         
+       
     
-}
+
